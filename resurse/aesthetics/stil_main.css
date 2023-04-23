@@ -1,0 +1,157 @@
+html{
+    font-size: 20px;
+    color: darkblue;
+    --margin-color: orangered;
+}
+
+body{
+    
+    background-color: deepskyblue;
+}
+
+main,header{
+    background-color:skyblue;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+section,nav{
+    border:3px solid var(--margin-color);
+    padding:15px;
+}
+
+#container_main{
+    display: grid;
+    grid-template-areas: "z-salut z-salut"
+                        "z-povesti z-povesti"
+                        "z-meniu z-program";
+    grid-template-columns: 1fr 1fr;
+}
+
+#container_main h2::before{
+    content: "~";
+    display: inline-block;
+}
+
+#salut{
+    grid-area: z-salut;
+}
+
+#povesti{
+    grid-area: z-povesti;
+    background-color: lightgreen;
+}
+
+#meniu{
+    grid-area: z-meniu;
+    margin-right: 15px;
+}
+
+#program{
+    grid-area: z-program;
+}
+
+#footer{
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: lightgreen;
+    border: 3px solid var(--margin-color);
+    padding: 15px;
+}
+
+#titlu{
+    text-align: center;
+    padding: 5px;
+}
+
+ul.meniu{
+    display: flex;
+}
+
+nav{
+    background-color: lightgreen;
+    width: 100%;
+}
+
+nav ul{
+    padding:0;
+}
+ul.meniu li{
+    list-style-type: none;
+    height:35px;
+    width:170px;
+    background-color: skyblue;
+    text-align: center;
+    line-height:30px;
+    overflow:hidden;
+    transition: background-color 2.5s linear, text-shadow 2s linear;
+}
+
+#chk-meniu, #img_meniu{
+    display:none;
+}
+
+
+ul.meniu>li:hover{
+    overflow:visible;
+}
+
+ul.meniu li:hover{
+    background-color: deepskyblue;
+}
+ul.meniu ul{
+    position:relative;
+}
+
+ul.meniu a{
+    display: block;
+    color:darkblue;
+    font-weight:bold;
+    text-decoration: none;
+    width: 100%;
+}
+
+@media screen and (max-width:850px){
+        ul.meniu{
+            display:none;
+            position:relative;
+            animation: animatie_meniu 0.5s linear 1;
+            width: 100%;
+        }
+    
+        ul.meniu li{
+            width:100%;
+            box-sizing: border-box;
+            overflow:hidden;
+            position:relative;
+        }
+    
+        ul.meniu ul{
+            position:absolute;
+            left:0px;
+            z-index:100;
+            width:100%;
+        }
+
+        #chk-meniu:checked~ul.meniu{
+            display: block;
+        }
+
+        #img_meniu{
+            margin-left: 95%;
+            height:30px;
+            width:30px;
+            display:inline-block;
+        }
+    
+    }
+    
+@keyframes animatie_meniu{
+    0%{
+         transform:scaleX(0);
+    }
+        
+    100%{
+        transform:scaleX(1);
+        }
+}

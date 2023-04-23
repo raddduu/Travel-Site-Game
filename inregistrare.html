@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <title>Joc</title>
+        <meta charset="UTF-8" />
+        <meta name="keywords" content="calatorii, vacanta, sejur, zboruri internationale" />
+        <meta name="description" content="Oferte calayotii, excursii internationale, cazare, ghid turistic. Preturi mici" />
+        <meta name="author" content="Ionescu Radu-Constantin" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./resurse/ico/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./resurse/ico/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./resurse/ico/favicon-16x16.png">
+        <link rel="manifest" href="./resurse/ico/site.webmanifest">
+        <link rel="mask-icon" href="./resurse/ico/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="./resurse/ico/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="./resurse/ico/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" type="text/css" href="./resurse/aesthetics/stil_joc.css"/>
+        <script src="./js_joc.js"></script>
+    </head>
+    <body>
+        
+        <div id="sus"></div>
+        <div id="jos"></div>
+        <div id="stanga"></div>
+        <div id="dreapta"></div>
+        <div id="mijloc"></div>
+        <div id="bol"></div>
+        <div id="abur"><img src="./resurse/poze/abur.gif"/></div>
+        <div id="transp"></div>
+        <div id="formular">
+            <p>Bine ati venit la magic bowl!</p><br>
+            <p>Folositi sagetile de pe tastatura pentru a</p><br>
+            <p>misca bolul. Acesta emite un abur magic ce</p><br>
+            <p>face orice pasta ce se afla deasupra castronului sa fie absorbita</p><br>
+            <p>de acesta ca si cum ar fi trasa de un aspirator!</p><br>
+            <p><b id="nracces"><b></p><br>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <input type="radio" id="usor" name="dificultate">
+            <label for="usor">usor</label><br>
+            <input type="radio" id="mediu" name="dificultate">
+            <label for="mediu">mediu</label><br>
+            <input type="radio" id="greu" name="dificultate">
+            <label for="greu">greu</label><br><br>
+            <input type="button" id="submit" value="submit">
+            <div id="pasta_form" class="pasta" style="top:70vh; left: 12.5vw; animation: none;"></div>
+            <p id="desc_paste"></p>
+        </div>
+        <div id="ceas"><h1></h1></div>
+    </body>
